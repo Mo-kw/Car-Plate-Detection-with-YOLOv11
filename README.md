@@ -1,47 +1,63 @@
-Car Plate Detection with YOLOv11
-This project focuses on detecting vehicle license plates using the YOLOv11 object detection model. It utilizes a labeled image dataset to train and evaluate a high-performance deep learning model capable of identifying license plates in various car images.
+# 🚗 Car Plate Detection with YOLOv11
 
-📂 Dataset
-The dataset includes images of vehicles along with corresponding annotations marking the position of license plates. The annotations are provided in Pascal VOC (XML) format and were converted into a format suitable for YOLO-based training.
+This project demonstrates how to detect vehicle license plates using the **YOLOv11** object detection model. It uses a public dataset of annotated car images, processes the data, and trains a YOLOv11 model to accurately identify license plates.
 
-🧰 Tools and Frameworks
-YOLOv11: An advanced object detection model known for its speed and accuracy, suitable for real-time applications.
+---
 
-Computer Vision Libraries: Used for image handling and visualization.
+## 📁 Dataset
 
-Data Processing Tools: Employed to analyze, split, and format the dataset.
+- **Source**: Public dataset containing vehicle images with annotated license plates.
+- **Format**: Annotations in **Pascal VOC (XML)** format.
+- **Preparation**: Annotations are converted to **YOLO-compatible format** and organized for training.
 
-Visualization Tools: Used to monitor training performance and prediction results.
+---
 
-🛠️ Workflow Overview
-Dataset Acquisition
-The dataset was obtained from an open-source platform and contains both images and their annotations.
+## 📊 Project Workflow
 
-Annotation Processing
-Annotations were converted from VOC format to the YOLOv11-compatible format by normalizing the bounding boxes and assigning class labels.
+### 1. **Dataset Acquisition**
 
-Data Organization
-The data was split into training and validation sets. Files were arranged according to YOLOv11’s required directory structure for seamless model training.
+The dataset was downloaded and extracted. A few images were visualized with bounding boxes to verify annotation accuracy.
 
-Model Training
-YOLOv11 was trained using the prepared dataset over multiple epochs. Performance was tracked using standard metrics such as mean Average Precision (mAP), precision, recall, and various loss indicators.
+### 2. **Annotation Conversion**
 
-Model Evaluation
-After training, the model was tested on a set of unseen validation images. Predicted bounding boxes were visualized to assess the model’s accuracy in identifying license plates.
+The XML annotations were converted into YOLO format. Bounding box coordinates were normalized, and each object was assigned a numeric class label.
 
-📈 Results
-The model showed strong performance in detecting license plates with high precision and recall.
+### 3. **Data Organization**
 
-Training metrics and graphs confirmed effective learning over time.
+The dataset was split into **training** and **validation** sets (typically 80/20 split) and structured in the YOLOv11 directory format:
+- Separate folders for images and labels
+- Train and validation subfolders
 
-Visualization of predictions demonstrated the model's ability to generalize to new data.
+### 4. **Model Training**
 
-🚀 Future Work
-Incorporate Optical Character Recognition (OCR) to read and extract license plate numbers.
+The YOLOv11 model was trained on the prepared dataset. The training process involved monitoring several metrics:
+- **Box Loss**
+- **Classification Loss**
+- **Precision & Recall**
+- **mAP (mean Average Precision)**
 
-Extend the model to support detection in live video streams.
+### 5. **Evaluation & Visualization**
 
-Experiment with different YOLOv11 configurations and training settings for further improvements.
+The trained model was tested on unseen validation data. Predictions were visualized with bounding boxes to confirm the model’s ability to detect license plates accurately.
 
-📜 License
-This project is for educational and non-commercial research purposes. Please refer to the dataset and model licenses before reusing or distributing the work.
+---
+
+## 📈 Results
+
+- **High accuracy** in detecting license plates.
+- **Consistent improvements** in training metrics across epochs.
+- Visual results confirm strong **generalization** to new, unseen images.
+
+---
+
+## 🚀 Future Improvements
+
+- 🔠 Add **OCR integration** to read the license plate numbers.
+- 🎥 Extend to **real-time video detection**.
+- ⚙️ Experiment with different YOLOv11 model sizes and **fine-tune hyperparameters**.
+
+---
+
+## 📜 License
+
+This project is for **educational and research purposes only**. Please consult the dataset and model licenses before commercial use or redistribution.
