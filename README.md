@@ -1,5 +1,7 @@
 # 🚗 Car Plate Detection with YOLOv11
 
+[![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/your-notebook-id](https://github.com/Mo-kw/Car-Plate-Detection-with-YOLOv11/blob/main/Car_Plate.ipynb))
+
 This project demonstrates how to detect vehicle license plates using the **YOLOv11** object detection model. It uses a public dataset of annotated car images, processes the data, and trains a YOLOv11 model to accurately identify license plates.
 
 ---
@@ -47,6 +49,11 @@ The trained model was tested on unseen validation data. Predictions were visuali
 - **High accuracy** in detecting license plates.
 - **Consistent improvements** in training metrics across epochs.
 - Visual results confirm strong **generalization** to new, unseen images.
+
+### 🖼️ Sample Output
+
+![Sample Prediction]([https://your-image-link.com/result.png](https://github.com/Mo-kw/Car-Plate-Detection-with-YOLOv11/blob/main/Sample.png))
+
 
 ---
 
